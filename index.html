@@ -216,7 +216,7 @@
 <h1>Machine Learning - Boosting</h1>
 <h2 id="masaccio-braun">Masaccio Braun</h2>
 <p>In the past, we have used machine learning methods that implement a single <em>learner</em> i.e. linear regressor, decision tree regressor, etc., as well as learning methods that implement multiple learners i.e. random forest regressor. Random forest models are known as 'ensemble' methods because they use a group of learners to enhance the performance of each individual learner and create a stronger, aggregate model. However, many of the individual learners in the ensemble tend to be <em>weak learners</em>, such that some tend to make poor predictions based on the observations they are specifically trained on. One way to combat this is through <strong>boosting</strong>. Boosting is a derivative of bagging, in which weak learners are trained simultaneously through a random selection, each having equal <em>weight</em> in predictive capability. Boosting differs in that the models have differing weights, since they are trained sequentially to compensate for weak learners by taking the efficacy of the previous model and increasing the weights of the data that the previous model had the highest error with.</p>
-<p><img src="vertopal_36b40601c4794c6b8b7ee372dc698101/51c38e45f67558ed3101666399d0813b72394fd7.png" alt="boostingvsbagging" /></p>
+<p><img src="https://user-images.githubusercontent.com/85206050/155819678-98998612-ea0b-4460-b4fa-794efbc8d292.png" alt="boostingvsbagging" /></p>
 <p>Source: <a href="https://towardsdatascience.com/what-is-boosting-in-machine-learning-2244aa196682" class="uri">https://towardsdatascience.com/what-is-boosting-in-machine-learning-2244aa196682</a></p>
 <p>There are a multitude of methods that can be implemented to boost a model. In this exploration, I will test a random forest booster and a decision tree booster for locally weighted regression and a version of extreme gradient boosting regression, and compare the results of their predictions in two multivariate analyses.</p>
 </section>
@@ -573,7 +573,7 @@ Requirement already satisfied: six in /usr/local/lib/python3.7/dist-packages (fr
 <span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">&#39;houses_heat.png&#39;</span>)</span>
 <span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="output display_data">
-<p><img src="vertopal_36b40601c4794c6b8b7ee372dc698101/25f9d79aa57e51d123a8b78bb0cc4035ce7994a8.png" width="786" height="835" /></p>
+<p><img src="https://user-images.githubusercontent.com/85206050/155821096-bb68598d-7942-43fe-b335-f4e0fcf1ed72.png" width="786" height="835" /></p>
 </div>
 </div>
 <div class="cell markdown" id="2g_4dVJwChRt">
@@ -588,7 +588,7 @@ Requirement already satisfied: six in /usr/local/lib/python3.7/dist-packages (fr
 <pre><code>&lt;Figure size 960x960 with 0 Axes&gt;</code></pre>
 </div>
 <div class="output display_data">
-<p><img src="vertopal_36b40601c4794c6b8b7ee372dc698101/521d5d28703d9daccd0edd091f769f906f0442ae.png" width="1182" height="1180" /></p>
+<p><img src="https://user-images.githubusercontent.com/85206050/155821104-b6245200-9a45-4df2-9fa9-1e95771dcacd.png" width="1182" height="1180" /></p>
 </div>
 </div>
 <div class="cell code" data-execution_count="8" id="9GB1eum7Ef2h">
@@ -678,7 +678,7 @@ Requirement already satisfied: six in /usr/local/lib/python3.7/dist-packages (fr
 <section id="extreme-gradient-boosting" class="cell markdown" id="Oj_Jh_F0Cvzv">
 <h2>Extreme Gradient Boosting</h2>
 <p>A derivative of gradient boosting. In this method, a set of parallel decision trees are fitted to the residuals of the previous trees' predictions, so it is an ensemble model similar to random forest. However, instead of relying on traditional decision trees, XGB uses <em>XGBoost trees</em>, which are created by calculating <em>similarity scores</em> between the observations of the leaf nodes. Furthermore, XGB implements regularization to prevent overfitting of the individual decision trees. With XGB, the process of sequentially creating weak models is done so as a <em>gradient descent</em> algorithm using an objective cost function, in which the algorithm iterates until the cost function is at close to or equal to zero, or at least at the lowest minima. In order to minimize the loss function,we take its partial derivative with respect to its slope and its intercept, then subtracting this from the slope beta (denoted theta in the case of the equation below). The partial derivative is scaled by a desired learning rate (hyperparameter) and this process is repeated until a convergence at the minimum.</p>
-<p><img src="vertopal_36b40601c4794c6b8b7ee372dc698101/10255763d97490ec18f218c5d815c13a9dc8d915.png" alt="xgbcostfunctionderivative" /></p>
+<p><img src="https://user-images.githubusercontent.com/85206050/155819783-c0e46347-41ea-40ab-98c2-793348a098d0.png" alt="xgbcostfunctionderivative" /></p>
 <p>Source: <a href="https://medium.com/analytics-vidhya/what-makes-xgboost-so-extreme-e1544a4433bb" class="uri">https://medium.com/analytics-vidhya/what-makes-xgboost-so-extreme-e1544a4433bb</a></p>
 </section>
 <div class="cell code" data-execution_count="13" id="7zCnKQdHLCNc">
@@ -1063,7 +1063,7 @@ The Cross-validated Coefficient of Determination for Extreme Gradient Regression
 <span id="cb42-16"><a href="#cb42-16" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">&#39;concrete_heat.png&#39;</span>)</span>
 <span id="cb42-17"><a href="#cb42-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="output display_data">
-<p><img src="vertopal_36b40601c4794c6b8b7ee372dc698101/bf69307732d65a8a18d3aa7c936045d2d0a6becd.png" width="786" height="835" /></p>
+<p><img src="verthttps://user-images.githubusercontent.com/85206050/155821112-7f2bced4-b85f-4bea-8249-a32e4437f6b7.png" width="786" height="835" /></p>
 </div>
 </div>
 <div class="cell code" data-execution_count="47" data-colab="{&quot;height&quot;:1000,&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}" id="1Uoxiv0E-6TU" data-outputId="c56ea2d0-e91f-4d98-c878-598af5a105b0">
@@ -1075,7 +1075,7 @@ The Cross-validated Coefficient of Determination for Extreme Gradient Regression
 <pre><code>&lt;Figure size 960x960 with 0 Axes&gt;</code></pre>
 </div>
 <div class="output display_data">
-<p><img src="vertopal_36b40601c4794c6b8b7ee372dc698101/a75ef388cf021512a6a8a68f9fbd2976abc0a765.png" width="1182" height="1180" /></p>
+<p><img src="https://user-images.githubusercontent.com/85206050/155821121-54938540-4831-4d35-ab9a-c2dec854235a.png" width="1182" height="1180" /></p>
 </div>
 </div>
 <div class="cell code" data-execution_count="48" data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}" id="G0jbXPPlPU3E" data-outputId="8949a66d-1508-4567-9280-df6c62b17b05">
